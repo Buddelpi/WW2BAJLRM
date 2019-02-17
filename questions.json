@@ -1,0 +1,55 @@
+[ {
+  "Num" : 1,
+  "Q" : "How many Bosch colleagues gave up on JLR-MRR this year?",
+  "A1" : "2",
+  "A2" : "15",
+  "A3" : "6",
+  "A4" : "No idea - India\nresources change\nevery day",
+  "Right" : 4
+  
+}, {
+  "Num" : 2,
+  "Q" : "How often does JLR contacts Bosch Team about the same topic?",
+  "A1" : "Never, because they\nunderstand the topic\nright from the beginning",
+  "A2" : "Every time you think\nthey understood and\ntopic is closed",
+  "A3" : "Based on the Indian\nMoon Calendar",
+  "A4" : "Based on\nBrexit discussions",
+  "Right" : 3
+   
+}, {
+  "Num" : 3,
+  "Q" : "Which of the following András's haven't worked\nfor the JLR-Cluster?",
+  "A1" : "András Tamás",
+  "A2" : "András Balázs",
+  "A3" : "András Kalmár",
+  "A4" : "András Jánosi",
+  "Right" : 1
+  
+}, {
+  "Num" : 4,
+  "Q" : "Which NEW Driver Assistance Feature did Bosch\n bring to series with JLR in 2018?",
+  "A1" : "Running in Circle\nMeeting Alert  (RCMA)",
+  "A2" : "Traffic Jam Assist /\nIntegrated Cruise Assist\n(TJA/ICA)",
+  "A3" : "Req. Mngmt. Getting\nMy A** Kicked Cruise\nAssist (RMGMAKCA)",
+  "A4" : "Traffic Jam\nAre You Kidding\nMe Pilot (TJAYKMP)",
+  "Right" : 2
+  
+}, {
+  "Num" : 5,
+  "Q" : "Which Bosch Manager complains the most about\n JLR vehicles parked at SL2 slots?",
+  "A1" : "The Incredible Hulk",
+  "A2" : "Spiderman",
+  "A3" : "Deadpool",
+  "A4" : "Bernhard Lucas",
+  "Right" : 4
+  
+}, {
+  "Num" : 6,
+  "Q" : "Which of these is an actual Hungarian word?",
+  "A1" : "Saltiszdigykortyvaja",
+  "A2" : "Nemderem",
+  "A3" : "Györjeltfeltszorzeste",
+  "A4" : "Gyorsjegyzet",
+  "Right" : 4
+}
+]
