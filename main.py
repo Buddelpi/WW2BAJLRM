@@ -259,8 +259,6 @@ class GameScreen(Screen):
                     self.gameState = -1
                     self.updateQuestion(self.questionNumber)
                     self.invisibleAnswers()
-                    if self.questionNumber == 3:
-                        playsound('Sounds/SoS_calls.mp3',False)
                     
                     
         elif self.gameState == 3: #Answer was wrong, but continue the game  
@@ -281,8 +279,7 @@ class GameScreen(Screen):
                     self.gameState = -1
                     self.updateQuestion(self.questionNumber)
                     self.invisibleAnswers()
-                    if self.questionNumber == 3:
-                        playsound('Sounds/SoS_calls.mp3',False)
+                    
                     
         elif self.gameState == 4: #Winner screen shows up
             #if self.st.stateTimer(2):
@@ -345,20 +342,12 @@ class GameScreen(Screen):
             playsound('Sounds/question_start.mp3',False)
         elif cycle == 1:
             self.makeVisible(1)
-            if self.questionNumber == self.numOfQuestions - 1:
-                playsound('Sounds/Question_6/hun_1.mp3',False)
         elif cycle == 2:
             self.makeVisible(2)
-            if self.questionNumber == self.numOfQuestions - 1:
-                playsound('Sounds/Question_6/hun_2.mp3',False)
         elif cycle == 3:
             self.makeVisible(3)
-            if self.questionNumber == self.numOfQuestions - 1:
-                playsound('Sounds/Question_6/hun_3.mp3',False)
         elif cycle == 4:
             self.makeVisible(4)
-            if self.questionNumber == self.numOfQuestions - 1:
-                playsound('Sounds/Question_6/hun_4.mp3',False)
         else:
             print 'Odd cycle'
      

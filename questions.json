@@ -51,5 +51,21 @@
   "A3" : "Györjeltfeltszorzeste",
   "A4" : "Gyorsjegyzet",
   "Right" : 4
+}, {
+  "Num" : 7,
+  "Q" : "Which of these is an actual Hungarian word?",
+  "A1" : "Saltiszdigykortyvaja",
+  "A2" : "Nemderem",
+  "A3" : "Györjeltfeltszorzeste",
+  "A4" : "Gyorsjegyzet",
+  "Right" : 4
+}, {
+  "Num" : 8,
+  "Q" : "Which of these is an actual Hungarian word?",
+  "A1" : "Saltiszdigykortyvaja",
+  "A2" : "Nemderem",
+  "A3" : "Györjeltfeltszorzeste",
+  "A4" : "Gyorsjegyzet",
+  "Right" : 4
 }
 ]
