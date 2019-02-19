@@ -21,7 +21,6 @@ from kivy.base import EventLoop
 import json
 
 CREDITS = """
-Danke Bernhard
 """
 
 class Answer(Widget):
@@ -81,6 +80,8 @@ class GameScreen(Screen):
     phoneJokerImage = StringProperty('Images/jpgePhone.jpg')
     peopleJokerImage = StringProperty('Images/jpgePeople.jpg')
     
+    questionSize = NumericProperty(20)
+    
     questionNumber = NumericProperty(0)
     numOfQuestions = NumericProperty(0)
     questionSequenceCounter = NumericProperty(0)
@@ -112,7 +113,8 @@ class GameScreen(Screen):
         super(GameScreen, self).__init__(**kwargs)
         #Load data from Json file
         self.data = self.loadData()
-        self.numOfQuestions = len(self.data)
+        self.numOfQuestions = len(self.data)-1
+        self.questionSize = self.data[self.numOfQuestions]['Text_Size']
         #update actual data set for the first round
         self.updateQuestion(self.questionNumber)
         
@@ -476,7 +478,7 @@ class GameScreen(Screen):
             
 class MissionnaireApp(App):
     
-    questionSize = 20
+    
     
     def build(self):
         root = ScreenManager(transition=FallOutTransition())
