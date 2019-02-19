@@ -1,0 +1,1 @@
+python -m PyInstaller --name WW2BAMBSE C:\Users\Ercsi\Documents\GitHub\WW2BAJLRM\main.py

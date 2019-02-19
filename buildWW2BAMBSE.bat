@@ -1,0 +1,1 @@
+python -m PyInstaller WW2BAMBSE.spec

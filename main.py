@@ -21,34 +21,7 @@ from kivy.base import EventLoop
 import json
 
 CREDITS = """
-Sponsor:
-    CP/CAR
-    
-Game Host No. 1:
-    Johannes
-    
-Game Host No. 2:
-    Vinay
-    
-Phone Joker:
-    Muyan
-    
-Support Team:
-    Krisztina
-    Bart
-    Berenike
-    
-Unplanned Application
-Support:
-    Rainer
-    Markus
-    Moritz
-    
-Graphic design:
-    Peter (Nagy)
-    
-The Tech guy:
-    JAndras
+Danke Bernhard
 """
 
 class Answer(Widget):
@@ -113,8 +86,7 @@ class GameScreen(Screen):
     questionSequenceCounter = NumericProperty(0)
     
     gameState = NumericProperty(-3)
-    #gameState = NumericProperty(4)
-    
+     
     isAnswerCame = BooleanProperty(False)
     isStartup = BooleanProperty(True)
     currentAnswer = NumericProperty(0)
@@ -127,8 +99,8 @@ class GameScreen(Screen):
     phoneJokerColor = ListProperty([1,1,1,0])
     isPeopleJokerPressed = BooleanProperty(False)
     isPeopleJokerPressedOnce = BooleanProperty(False)
+    peopleJokerCounter = NumericProperty(30)
     peopleJokerColor = ListProperty([1,1,1,0])
-    peopleJokerVote = StringProperty("Images/votescreen_blank.jpg")
     
     prizeTrackerImage = StringProperty("Images/Prizetracker/prizetracker_1.jpg")
     
@@ -146,6 +118,7 @@ class GameScreen(Screen):
         
         self.st = StateTimer()
         Window.bind(on_keyboard=self._on_keyboard_handler)
+        Window.fullscreen = 'auto'
         Clock.schedule_interval(self.updateSM, 1)
     
     def _on_keyboard_handler(self, instance, key, *args):
@@ -214,14 +187,27 @@ class GameScreen(Screen):
                     print 'Waiting for space pressed, then clock starts'
              
             if self.isPeopleJokerPressed:
-
-                if not self.st.stateTimer(14):
-                    if self.st.cnt == 1:
-                        playsound('Sounds/people.mp3',False)
-                        self.peopleJokerColor = [1,1,1,1]
+                self.phoneJokerColor = [1,1,1,0]
+                if self.isSpacePressed:
+                    if not self.st.stateTimer(30):
+                        if self.st.cnt == 1:
+                            playsound('Sounds/phone.mp3',False)
+                        self.peopleJokerCounter = 30-self.st.cnt
+                    else:
+                        self.peopleJokerCounter = 30-self.st.cnt
+                        self.isPeopleJokerPressed = False
+                        self.isPeopleJokerPressedOnce = True
+                        self.setPeopleJokerVisible(False)
                 else:
-                    self.peopleJokerVote = "Images/votescreen.jpg"
-                    self.isPeopleJokerPressed = False
+                    print 'Waiting for space pressed, then clock starts'
+                        
+                # if not self.st.stateTimer(14):
+                    # if self.st.cnt == 1:
+                        # playsound('Sounds/people.mp3',False)
+                        # self.peopleJokerColor = [1,1,1,1]
+                # else:
+                    # self.peopleJokerVote = "Images/votescreen.jpg"
+                    # self.isPeopleJokerPressed = False
                    
             if self.isAnswerCame: 
                 print 'In Question'
@@ -475,15 +461,22 @@ class GameScreen(Screen):
         else:
             self.phoneJokerColor = [1,1,1,0]
             
+    def setPeopleJokerVisible(self,isSetPeople):
+        if isSetPeople == True:
+            self.peopleJokerColor = [1,1,1,1]
+        else:
+            self.peopleJokerColor = [1,1,1,0]
+            
     def peopleJokerPressed(self):
         if not self.isPeopleJokerPressedOnce and not self.isButtonActivityBlocked:
+            self.setPeopleJokerVisible(True)
             self.isPeopleJokerPressed = True
             self.isPeopleJokerPressedOnce = True
             self.peopleJokerImage = 'Images/jpgePeopleX.jpg'
             
 class MissionnaireApp(App):
     
-    questionSize = 25
+    questionSize = 20
     
     def build(self):
         root = ScreenManager(transition=FallOutTransition())
