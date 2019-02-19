@@ -1,4 +1,4 @@
-('C:\\Users\\Ercsi\\Documents\\GitHub\\WW2BAJLRM\\build\\WW2BAMBSE\\PYZ-00.pyz',
+('c:\\Users\\Ercsi\\Documents\\GitHub\\WW2BAJLRM\\build\\WW2BAMBSE\\PYZ-00.pyz',
  [('multiprocessing.forking',
    'C:\\Python27\\lib\\multiprocessing\\forking.py',
    'PYMODULE'),
