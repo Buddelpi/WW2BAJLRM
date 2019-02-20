@@ -435,7 +435,9 @@ class GameScreen(Screen):
         self.actualAnswer4 = self.data[num]['A4']
         self.actualQuestion = self.data[num]['Q']
         
-        imagePath = "Images/Prizetracker/prizetracker_" + str(num+1) + ".jpg"
+#         imagePath = "Images/Prizetracker/prizetracker_" + str(num+1) + ".jpg"
+        imagePath = "Images/Prizetracker/prizetracker_" + str(num+1) + "_minborder.jpg"
+#         imagePath = "Images/Prizetracker/prizetracker_" + str(num+1) + "_noborder.jpg"
         print imagePath
         self.prizeTrackerImage = imagePath
     
