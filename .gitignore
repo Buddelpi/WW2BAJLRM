@@ -1,4 +1,4 @@
-# Ignore the dist folder and the build folder --> these are needed on ly on windows
-dist/
-build/
+# Ignore the dist folder and the build folder --> these are needed only on windows
+/dist/*
+/build/*
 OGLdpf.log
