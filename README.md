@@ -1,0 +1,12 @@
+# WW2BAJLRM
+
+A Who wants to be a millionaire game written in python kivy
+
+Dependencies:
+
+Python2.7.x
+Kivy - https://kivy.org/#home
+Playsound - https://pypi.org/project/playsound/
+PyInstaller - Framework has been set up for windows - executables will be generated to "dist" folder (valid for the Bernhard-Special-Edition branch only)
+
+Tested on Mac osX, Win8.1, Win10.
