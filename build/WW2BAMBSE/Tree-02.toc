@@ -1,5 +1,0 @@
-('c:\\Users\\Ercsi\\Documents\\GitHub\\WW2BAJLRM\\build\\WW2BAMBSE\\playsound-1.2.1-py2.7.egg',
- None,
- set(['*.py', '*.pyc', '*.pyd', '*.pyw', 'EGG-INFO']),
- 'DATA',
- [])

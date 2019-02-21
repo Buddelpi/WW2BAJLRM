@@ -65,9 +65,9 @@
   "A1" : "Bei -20°",
   "A2" : "Bei +0°",
   "A3" : "Bei +15°",
-  "A4" : "Bei +90",
+  "A4" : "Bei +90°",
   "Right" : 1
 },{
-  "Text_Size" : 20
+  "Text_Size" : 30
 } 
 ]
